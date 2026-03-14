@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auditions &amp; Contact — Theatre 17</title>
   <meta name="description" content="Sign up for auditions or get in touch with Theatre 17 in Dryden, Ontario.">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 <body>
 
   <nav class="nav">
