@@ -1,0 +1,150 @@
+---
+layout: base.njk
+navActive: contact
+permalink: contact.html
+pageTitle: "Auditions & Contact — Theatre 17"
+pageDescription: "Sign up for auditions or get in touch with Theatre 17 in Dryden, Ontario."
+---
+
+{% set show = collections.shows | currentShow %}
+{% set s = settings.general %}
+
+
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">Get Involved</span>
+    <h1>Auditions &amp; Contact</h1>
+    <p>We'd love to have you on stage, backstage, or in the audience. Everyone is welcome at Theatre 17.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="forms-layout">
+
+      <!-- Audition Info -->
+      <div class="audition-info">
+        {% if show and show.data.status in ["auditions", "planning"] %}
+          <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Now Casting</span>
+          <h2 style="font-style:italic;margin-bottom:0.25rem;">{{ show.data.title }}</h2>
+          <p>{{ show.data.season }} {{ show.data.year }}{% if show.data.playwright %} &bull; {{ show.data.playwright }}{% endif %}</p>
+        {% else %}
+          <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Get Involved</span>
+          <h2 style="margin-bottom:0.25rem;">Auditions &amp; Involvement</h2>
+          <p>We hold auditions twice yearly. Register your interest and we'll be in touch when the next casting call opens.</p>
+        {% endif %}
+        <div class="ornament-full"></div>
+        <div class="audition-detail">
+          <span class="audition-detail-label">Open to</span>
+          <span class="audition-detail-value">All ages 16+. All experience levels welcome. No theatre background necessary.</span>
+        </div>
+        <div class="audition-detail">
+          <span class="audition-detail-label">Prepare</span>
+          <span class="audition-detail-value">Nothing required — cold readings provided. Come as you are.</span>
+        </div>
+        <div class="audition-detail">
+          <span class="audition-detail-label">Crew too!</span>
+          <span class="audition-detail-value">Interested in sets, costumes, lighting, or stage management? Note it on your form — no audition required.</span>
+        </div>
+        {% if s and s.contact_email %}
+        <div class="audition-detail">
+          <span class="audition-detail-label">Email</span>
+          <span class="audition-detail-value"><a href="mailto:{{ s.contact_email }}">{{ s.contact_email }}</a></span>
+        </div>
+        {% endif %}
+        <div style="margin-top:1.5rem;padding:1rem;background:var(--gold-pale);border-radius:var(--radius);border:1px solid var(--gold-light);">
+          <p style="font-size:0.88rem;color:#7A5C10;margin:0;">
+            <strong>Youth Theatre Workshops</strong> are available for ages 10–17. Contact us for registration information and upcoming session dates.
+          </p>
+        </div>
+      </div>
+
+      <!-- Audition Form -->
+      <div class="form-block">
+        <h2>Audition Registration</h2>
+        <p>Fill out this form and we'll be in touch to confirm your time slot.</p>
+        <form name="audition" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="audition">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="aud-first">First Name</label>
+              <input type="text" id="aud-first" name="first-name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="aud-last">Last Name</label>
+              <input type="text" id="aud-last" name="last-name" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="aud-email">Email Address</label>
+            <input type="email" id="aud-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="aud-phone">Phone Number</label>
+            <input type="tel" id="aud-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="aud-interest">I'm interested in</label>
+            <select id="aud-interest" name="interest">
+              <option value="performing">Performing (on stage)</option>
+              <option value="crew">Crew / Production (backstage)</option>
+              <option value="both">Both performing and crew</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="aud-experience">Theatre Experience (optional)</label>
+            <textarea id="aud-experience" name="experience" placeholder="Previous shows, roles, training — or just let us know you're new. It's all welcome."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="aud-avail">Availability Notes</label>
+            <input type="text" id="aud-avail" name="availability" placeholder="e.g. can't do Friday evenings, available weekends only, etc.">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem;">Submit Registration</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- General Contact -->
+<section class="section-sm" style="background:var(--cream-dark);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-heading">
+      <span class="kicker">Questions?</span>
+      <h2>General Contact</h2>
+      <p>Not about auditions? Use the form below for any other enquiries.</p>
+    </div>
+    <div style="max-width:580px;margin:0 auto;">
+      <div class="form-block">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="con-name">Your Name</label>
+              <input type="text" id="con-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="con-email">Email Address</label>
+              <input type="email" id="con-email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="con-subject">Subject</label>
+            <input type="text" id="con-subject" name="subject">
+          </div>
+          <div class="form-group">
+            <label for="con-message">Message</label>
+            <textarea id="con-message" name="message" style="min-height:140px;" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

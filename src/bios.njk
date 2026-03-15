@@ -1,0 +1,88 @@
+---
+layout: base.njk
+navActive: bios
+permalink: bios.html
+pageTitle: "Members & Bios — Theatre 17"
+pageDescription: "Meet the current and alumni members of Theatre 17, Dryden's community theatre group."
+---
+
+
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">Our People</span>
+    <h1>Members &amp; Bios</h1>
+    <p>The cast, crew, and creative community that make Theatre 17 possible.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% set allMembers = collections.members %}
+
+    {% if allMembers.length %}
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="bio-filter-btn filter-btn active" data-filter="all">All Members</button>
+      <button class="bio-filter-btn filter-btn" data-filter="current">Current</button>
+      <button class="bio-filter-btn filter-btn" data-filter="alumni">Alumni</button>
+      <button class="bio-filter-btn filter-btn" data-filter="cast">Performers</button>
+      <button class="bio-filter-btn filter-btn" data-filter="crew">Crew &amp; Creative</button>
+    </div>
+
+    <!-- Bios Grid -->
+    <div class="bios-grid">
+      {% for member in allMembers %}
+      <div class="bio-card" data-tags="{{ member | memberTags }}">
+        <div class="bio-avatar">
+          {% if member.data.photo %}
+            <img src="{{ member.data.photo }}" alt="{{ member.data.name }}">
+          {% else %}
+            <div class="bio-avatar-placeholder">{{ member.data.name | initials }}</div>
+          {% endif %}
+        </div>
+
+        <span class="bio-tag {{ 'bio-tag-current' if member.data.member_type == 'current' else 'bio-tag-alumni' }}">
+          {{ "Current Member" if member.data.member_type == "current" else "Alumni" }}
+        </span>
+
+        <h3>{{ member.data.name }}</h3>
+        <div class="bio-role">{{ member.data.primary_role }}</div>
+
+        {% if member.data.bio %}
+          <div class="bio-text">{{ member.data.bio | markdown | safe }}</div>
+        {% endif %}
+
+        {% if member.data.shows_display %}
+          <div class="bio-shows">{{ member.data.shows_display }}</div>
+        {% endif %}
+
+        {% if member.data.external_url %}
+          <div style="margin-top:0.75rem;">
+            <a href="{{ member.data.external_url }}" target="_blank" rel="noopener" style="font-size:0.78rem;color:var(--burgundy);">Website &rarr;</a>
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div style="text-align:center;padding:4rem 0;">
+      <p style="color:var(--ink-light);font-style:italic;">No member bios yet. Add your first member in the CMS under <strong>Members &amp; Bios</strong>.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- Join CTA -->
+<div style="background:var(--cream-dark);border-top:1px solid var(--border);padding:3rem 0;">
+  <div class="container" style="text-align:center;">
+    <h2 style="font-style:italic;margin-bottom:0.75rem;">Want to Join Us?</h2>
+    <p style="max-width:480px;margin:0 auto 1.75rem;color:var(--ink-light);">We welcome new members at every skill level — whether you want to perform, build sets, sew costumes, or run the lights. Find out about our next auditions or reach out to introduce yourself.</p>
+    <a href="/contact.html" class="btn btn-primary">Get Involved</a>
+  </div>
+</div>
+

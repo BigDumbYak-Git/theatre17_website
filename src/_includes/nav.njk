@@ -1,0 +1,28 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/assets/logo-black.svg" alt="Theatre 17">
+    </a>
+    <div class="nav-links">
+      <a href="/" {% if navActive == "home" %}class="active"{% endif %}>Home</a>
+      <a href="/show.html" {% if navActive == "show" %}class="active"{% endif %}>Current Show</a>
+      <a href="/archive.html" {% if navActive == "archive" %}class="active"{% endif %}>Archive</a>
+      <a href="/bios.html" {% if navActive == "bios" %}class="active"{% endif %}>Members</a>
+      <a href="/news.html" {% if navActive == "news" %}class="active"{% endif %}>News</a>
+      <a href="/about.html" {% if navActive == "about" %}class="active"{% endif %}>About</a>
+      <a href="/contact.html" class="nav-cta {% if navActive == "contact" %}active{% endif %}">Auditions</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/">Home</a>
+  <a href="/show.html">Current Show</a>
+  <a href="/archive.html">Archive</a>
+  <a href="/bios.html">Members</a>
+  <a href="/news.html">News</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Auditions &amp; Contact</a>
+</div>

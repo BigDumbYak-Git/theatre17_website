@@ -1,0 +1,79 @@
+---
+layout: base.njk
+navActive: archive
+permalink: archive.html
+pageTitle: "Show Archive — Theatre 17"
+pageDescription: "Browse Theatre 17's complete history of productions dating back to 1972."
+---
+
+
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">Our History</span>
+    <h1>Show Archive</h1>
+    <p>Over fifty years of live theatre in Dryden. Browse our complete production history below.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% set allShows = collections.shows %}
+    {% set years = allShows | uniqueYears %}
+
+    {% if allShows.length %}
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-year="all">All Productions</button>
+      {% for year in years %}
+        <button class="filter-btn" data-year="{{ year }}">{{ year }}</button>
+      {% endfor %}
+    </div>
+
+    <!-- Archive Grid -->
+    <div class="archive-grid">
+      {% for show in allShows %}
+      <div class="archive-card" data-year="{{ show.data.year }}">
+        <div class="archive-card-poster">
+          {% if show.data.poster %}
+            <img src="{{ show.data.poster }}" alt="{{ show.data.title }} poster">
+          {% else %}
+            {% set colorIndex = (loop.index % 6) + 1 %}
+            <div class="archive-poster-placeholder ap-color-{{ colorIndex }}">
+              <div class="ap-title">{{ show.data.title }}</div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="archive-card-info">
+          <h3>
+            {% if show.data.current_show %}
+              <a href="/show.html">{{ show.data.title }}</a>
+            {% else %}
+              {{ show.data.title }}
+            {% endif %}
+          </h3>
+          <div class="year">
+            {{ show.data.season }} {{ show.data.year }}
+            {% if show.data.playwright %} &bull; {{ show.data.playwright }}{% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div style="text-align:center;padding:4rem 0;">
+      <p style="color:var(--ink-light);font-style:italic;">No shows in the archive yet. Add your first show in the CMS under <strong>Shows</strong>.</p>
+    </div>
+    {% endif %}
+
+    <div class="ornament-full" style="margin-top:3rem;"></div>
+    <p style="text-align:center;color:var(--ink-light);font-size:0.88rem;font-style:italic;">
+      Theatre 17 has been producing shows since 1972. Full historical archive being added over time.
+    </p>
+
+  </div>
+</section>
+

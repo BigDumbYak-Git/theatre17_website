@@ -1,0 +1,49 @@
+{% set s = settings.general %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo-white.svg" alt="Theatre 17">
+        <p>{{ s.footer_text or "Dryden's community theatre group, bringing live performance to Northwestern Ontario since 1972." }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/show.html">Current Show</a></li>
+          <li><a href="/archive.html">Show Archive</a></li>
+          <li><a href="/bios.html">Members &amp; Bios</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="/contact.html">Audition Sign-Up</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          {% if s.facebook_url %}
+            <li><a href="{{ s.facebook_url }}" target="_blank" rel="noopener">Facebook</a></li>
+          {% endif %}
+          {% if s.instagram_url %}
+            <li><a href="{{ s.instagram_url }}" target="_blank" rel="noopener">Instagram</a></li>
+          {% endif %}
+        </ul>
+        {% if s.contact_email %}
+        <div style="margin-top:1.5rem;">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.35);margin-bottom:0.3rem;">Email</div>
+          <a href="mailto:{{ s.contact_email }}" style="font-size:0.85rem;color:rgba(255,255,255,0.55);">{{ s.contact_email }}</a>
+        </div>
+        {% endif %}
+        <div style="margin-top:1rem;">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.35);margin-bottom:0.3rem;">Location</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);">{{ s.location or "Dryden, Ontario, Canada" }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ copyrightYear }} {{ s.group_name or "Theatre 17" }}. All rights reserved.</span>
+      <span>{{ s.location or "Dryden, Ontario, Canada" }}</span>
+    </div>
+  </div>
+</footer>

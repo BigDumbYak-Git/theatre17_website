@@ -1,0 +1,187 @@
+---
+layout: base.njk
+navActive: show
+permalink: show.html
+pageTitle: "Current Show — Theatre 17"
+pageDescription: "Theatre 17 current production in Dryden, Ontario."
+---
+
+{% set show = collections.shows | currentShow %}
+
+
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">{% if show %}{{ show.data.status | statusLabel }}{% else %}Coming Soon{% endif %}</span>
+    <h1 style="font-style:italic;">{% if show %}{{ show.data.title }}{% else %}Season Announcement Coming Soon{% endif %}</h1>
+    {% if show and show.data.playwright %}<p>by {{ show.data.playwright }}{% if show.data.year %} &mdash; {{ show.data.season }} {{ show.data.year }}{% endif %}</p>{% endif %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% if show %}
+    <div class="show-layout">
+
+      <!-- POSTER + ACTIONS -->
+      <div class="show-poster">
+        <div class="show-poster-img">
+          {% if show.data.poster %}
+            <img src="{{ show.data.poster }}" alt="{{ show.data.title }} poster">
+          {% else %}
+            <div class="poster-placeholder">
+              <div class="poster-title">{{ show.data.title }}</div>
+              <div class="poster-subtitle">Theatre 17 &mdash; {{ show.data.season }} {{ show.data.year }}</div>
+            </div>
+          {% endif %}
+        </div>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem;">
+          {% if show.data.ticket_url %}
+            <a href="{{ show.data.ticket_url }}" class="btn btn-primary" style="justify-content:center;" target="_blank" rel="noopener">Get Tickets</a>
+          {% endif %}
+          <a href="/contact.html" class="btn btn-ghost" style="justify-content:center;">Auditions for Next Show</a>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="show-details">
+        <span class="status-badge {{ show.data.status | statusClass }}" style="margin-bottom:1rem;">
+          {{ show.data.status | statusLabel }}
+        </span>
+        <h1>{{ show.data.title }}</h1>
+        {% if show.data.playwright %}
+          <p class="playwright">by {{ show.data.playwright }}</p>
+        {% endif %}
+
+        <div class="show-meta-grid">
+          {% if show.data.dates %}
+          <div class="show-meta-item">
+            <label>Dates</label>
+            <span>{{ show.data.dates }}</span>
+          </div>
+          {% endif %}
+          {% if show.data.venue %}
+          <div class="show-meta-item">
+            <label>Venue</label>
+            <span>{{ show.data.venue }}</span>
+          </div>
+          {% endif %}
+          {% if show.data.show_times %}
+          <div class="show-meta-item">
+            <label>Show Times</label>
+            <span>{{ show.data.show_times }}</span>
+          </div>
+          {% endif %}
+          {% if show.data.crew %}
+            {% for member in show.data.crew %}
+              {% if member.role and ("Director" in member.role or "director" in member.role) %}
+              <div class="show-meta-item">
+                <label>Director</label>
+                <span>{{ member.name }}</span>
+              </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        {% if show.data.description %}
+        <div class="show-description">
+          {{ show.data.description | markdown | safe }}
+        </div>
+        {% endif %}
+
+        <div class="ornament-full"></div>
+
+        <!-- CAST -->
+        {% if show.data.cast and show.data.cast.length %}
+        <div class="cast-section">
+          <div class="cast-section-title">The Cast</div>
+          <div class="cast-grid">
+            {% set half = (show.data.cast.length / 2) | round(0, "ceil") %}
+            <div>
+              <div class="cast-list">
+                {% for member in show.data.cast %}
+                  {% if loop.index <= half %}
+                  <div class="cast-row">
+                    <span class="cast-name">{{ member.name }}</span>
+                    <span class="cast-role">{{ member.role }}</span>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div>
+              <div class="cast-list">
+                {% for member in show.data.cast %}
+                  {% if loop.index > half %}
+                  <div class="cast-row">
+                    <span class="cast-name">{{ member.name }}</span>
+                    <span class="cast-role">{{ member.role }}</span>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- CREATIVE TEAM -->
+        {% if show.data.crew and show.data.crew.length %}
+        <div class="cast-section">
+          <div class="cast-section-title">Creative &amp; Production Team</div>
+          <div class="cast-list">
+            {% for member in show.data.crew %}
+            <div class="cast-row">
+              <span class="cast-name">{{ member.name }}</span>
+              <span class="cast-role">{{ member.role }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- DIRECTOR'S NOTE -->
+        {% if show.data.directors_note %}
+        <div class="cast-section">
+          <div class="cast-section-title">Director's Note</div>
+          <div style="font-size:0.95rem;color:var(--ink-mid);line-height:1.8;font-style:italic;padding-left:1rem;border-left:3px solid var(--gold);">
+            {{ show.data.directors_note | markdown | safe }}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- GALLERY -->
+        {% if show.data.gallery and show.data.gallery.length %}
+        <div class="gallery">
+          <div class="cast-section-title">Production Photos</div>
+          <div class="gallery-grid">
+            {% for item in show.data.gallery %}
+            <div class="gallery-item">
+              <img src="{{ item.image }}" alt="{{ item.caption or (show.data.title + ' production photo') }}">
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+    {% else %}
+    <div style="text-align:center;padding:4rem 0;">
+      <p style="font-family:var(--font-serif);font-size:1.25rem;font-style:italic;color:var(--ink-light);margin-bottom:2rem;">
+        Our next season announcement is coming soon.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/archive.html" class="btn btn-primary">Browse Past Shows</a>
+        <a href="/news.html" class="btn btn-outline">Latest News</a>
+        <a href="/contact.html" class="btn btn-ghost">Get Involved</a>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+

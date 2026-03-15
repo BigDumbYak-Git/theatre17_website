@@ -1,0 +1,13 @@
+{
+  "name": "theatre17-website",
+  "version": "1.0.0",
+  "description": "Theatre 17 community theatre website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.0.0"
+  }
+}

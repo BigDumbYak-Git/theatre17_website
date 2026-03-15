@@ -1,0 +1,61 @@
+---
+layout: base.njk
+navActive: news
+permalink: news.html
+pageTitle: "News & Announcements — Theatre 17"
+pageDescription: "The latest news, announcements, and updates from Theatre 17 in Dryden, Ontario."
+---
+
+
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">Stay Informed</span>
+    <h1>News &amp; Announcements</h1>
+    <p>Updates, audition calls, awards, and community notices from Theatre 17.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:760px;">
+
+    {% set allNews = collections.news %}
+
+    {% if allNews.length %}
+    <div class="news-list">
+      {% for post in allNews %}
+      <div class="news-item">
+        <div>
+          <span class="news-item-tag">{{ post.data.category | capitalize }}</span>
+          <h2><a href="#">{{ post.data.title }}</a></h2>
+
+          {% if post.data.summary %}
+            <p>{{ post.data.summary }}</p>
+          {% endif %}
+
+          {% if post.templateContent %}
+            <div style="color:var(--ink-light);font-size:0.95rem;line-height:1.75;">
+              {{ post.templateContent | safe }}
+            </div>
+          {% endif %}
+
+          {% if post.data.category == "auditions" %}
+            <a href="/contact.html" class="btn btn-outline" style="margin-top:1rem;font-size:0.78rem;padding:0.55rem 1.25rem;">
+              Register for Auditions
+            </a>
+          {% endif %}
+        </div>
+        <div class="news-item-date">{{ post.data.date | formatDate }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div style="text-align:center;padding:4rem 0;">
+      <p style="color:var(--ink-light);font-style:italic;">No news posts yet. Add your first announcement in the CMS under <strong>News &amp; Announcements</strong>.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
