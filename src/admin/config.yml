@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-# Media uploads — stored in the repo under assets/uploads
-media_folder: "assets/uploads"
+# Media uploads — stored in the repo under src/assets/uploads
+media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
 # Show the CMS at /admin
@@ -26,7 +26,7 @@ collections:
   - name: "shows"
     label: "Shows"
     label_singular: "Show"
-    folder: "_data/shows"
+    folder: "src/shows"
     create: true
     slug: "{{year}}-{{slug}}"
     summary: "{{title}} ({{year}}) — {{status}}"
@@ -186,7 +186,7 @@ collections:
   - name: "members"
     label: "Members & Bios"
     label_singular: "Member"
-    folder: "_data/members"
+    folder: "src/members"
     create: true
     slug: "{{slug}}"
     summary: "{{name}} — {{primary_role}}"
@@ -249,7 +249,7 @@ collections:
   - name: "news"
     label: "News & Announcements"
     label_singular: "Post"
-    folder: "_data/news"
+    folder: "src/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} ({{date}})"
@@ -317,7 +317,7 @@ collections:
     files:
       - label: "General Settings"
         name: "general"
-        file: "_data/settings/general.json"
+        file: "src/_data/settings/general.json"
         fields:
 
           - label: "Group Name"
