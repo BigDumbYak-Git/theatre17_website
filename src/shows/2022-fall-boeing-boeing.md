@@ -4,7 +4,7 @@ playwright: Marc Camoletti
 year: 2022
 season: Fall
 status: auditions
-current_show: false
+current_show: true
 dates: October 21 – 30, 2022
 venue: Dryden Performing Arts Centre
 description: A Parisian bachelor juggles three flight attendant fiancées on
