@@ -4,7 +4,7 @@ playwright: Oscar Wilde
 year: 2025
 season: Spring
 status: closed
-current_show: true
+current_show: false
 dates: April 25 – May 4, 2025
 show_times: Fridays & Saturdays 7:30 PM · Sunday 2:00 PM
 venue: Dryden Performing Arts Centre
