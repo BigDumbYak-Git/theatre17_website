@@ -64,9 +64,7 @@ pageDescription: "Sign up for auditions or get in touch with Theatre 17 in Dryde
       <div class="form-block">
         <h2>Audition Registration</h2>
         <p>Fill out this form and we'll be in touch to confirm your time slot.</p>
-        <form name="audition" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="audition">
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <form action="https://formspree.io/f/xzdjnrly" method="POST">          
           <div class="form-row">
             <div class="form-group">
               <label for="aud-first">First Name</label>
@@ -117,13 +115,11 @@ pageDescription: "Sign up for auditions or get in touch with Theatre 17 in Dryde
       <span class="kicker">Questions?</span>
       <h2>General Contact</h2>
       <p>Not about auditions? Use the form below for any other enquiries.</p>
-    </div>
+    </div> 
     <div style="max-width:580px;margin:0 auto;">
       <div class="form-block">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="form-row">
+      <form action="https://formspree.io/f/xeerygbn" method="POST">
+        <div class="form-row">
             <div class="form-group">
               <label for="con-name">Your Name</label>
               <input type="text" id="con-name" name="name" required>
