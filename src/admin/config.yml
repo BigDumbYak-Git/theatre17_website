@@ -2,14 +2,12 @@ backend:
   name: github
   repo: BigDumbYak-Git/theatre17website
   branch: main
-  base_url: theatre17-cms-auth.bigdumbyak.workers.dev
+  base_url: https://theatre17-cms-auth.bigdumbyak.workers.dev
 
-# Media uploads — stored in the repo under src/assets/uploads
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
-# Show the CMS at /admin
-site_url: https://theatre17.netlify.app
+site_url: https://theatre17website.bigdumbyak.workers.dev
 
 # =============================================
 # COLLECTIONS
