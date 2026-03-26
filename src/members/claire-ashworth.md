@@ -1,8 +1,9 @@
 ---
-name: Claire Ashworth
-primary_role: Actor
+name: Amy Maua
+photo: /assets/uploads/headshot_amymaua.jpeg
+primary_role: Actor/Director
 member_type: current
-performer_or_crew: cast
-shows_display: "Earnest · Steel Magnolias · Wizard of Oz · Clue"
-bio: Claire joined Theatre 17 in 2020 and quickly became one of the group's most versatile performers. She has appeared in seven productions and also assists with workshop facilitation.
+performer_or_crew: both
+bio: Amy's Bio goes here
+shows_display: Blithe Spirit · Rocky Horror Picture Show · Earnest · Clue
 ---
