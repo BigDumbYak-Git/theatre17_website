@@ -1,7 +1,7 @@
 ---
 title: Blithe Spirit
 playwright: Noël Coward
-year: 2026
+year: 2024
 season: Fall
 status: closed
 current_show: false
