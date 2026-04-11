@@ -9,7 +9,7 @@ dates: January 21, 22, 23
 opening_date: 2016-01-21
 closing_date: 2016-01-23
 show_times: 7:00 PM
-venue: The Center
+venue: The Centre
 poster: /assets/uploads/poster_exitlaughing.webp
 description: Three southern ladies from Birmingham — Connie, Leona, and Millie —
   "borrow" the ashes of their deceased bridge partner from a funeral home for
