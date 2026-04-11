@@ -28,7 +28,7 @@ cast:
     role: "AWOL: Lily  / The Wedding Story: Bride"
   - name: Ted Mitchell
     role: "AWOL: Volunteer, Trevor  /  The Wedding Story: Groom"
-  - name: Brittany Cook
+  - name: Brittany Cooke
     role: "The Wedding Story: Storyteller"
   - name: Joe Trudgen
     role: "AWOL: The Menu Man"
