@@ -307,6 +307,105 @@ collections:
         hint: "The full text of the announcement or news item."
 
   # -------------------------------------------
+  # PAGES
+  # Single-file collections for editable static
+  # pages like About. Each file entry maps to a
+  # JSON data file consumed by the page template.
+  # -------------------------------------------
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - label: "About Page"
+        name: "about"
+        file: "src/_data/about.json"
+        fields:
+
+          - label: "Page Header"
+            name: "page_header"
+            widget: "object"
+            fields:
+              - label: "Kicker (small label above heading)"
+                name: "kicker"
+                widget: "string"
+                hint: "e.g. Who We Are"
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+              - label: "Subheading"
+                name: "subheading"
+                widget: "string"
+
+          - label: "Content Sections"
+            name: "content_sections"
+            widget: "list"
+            label_singular: "Section"
+            hint: "Main body sections. Add, remove, or reorder freely."
+            fields:
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+              - label: "Body"
+                name: "body"
+                widget: "markdown"
+                hint: "Supports bold, italic, links, and lists."
+
+          - label: "Sidebar Cards"
+            name: "sidebar_cards"
+            widget: "list"
+            label_singular: "Card"
+            hint: "Cards in the right sidebar. Add, remove, or reorder freely."
+            fields:
+              - label: "Card Type"
+                name: "card_type"
+                widget: "select"
+                options:
+                  - { label: "List Card (label/value rows)", value: "list" }
+                  - { label: "Call to Action (body text + button)", value: "cta" }
+                default: "list"
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+              - label: "List Items"
+                name: "items"
+                widget: "list"
+                label_singular: "Item"
+                required: false
+                hint: "Used when Card Type is List. Each item shows as a label/value row."
+                fields:
+                  - label: "Label"
+                    name: "label"
+                    widget: "string"
+                  - label: "Value"
+                    name: "value"
+                    widget: "string"
+              - label: "Footnote"
+                name: "footnote"
+                widget: "string"
+                required: false
+                hint: "Small italic text shown below the list. Leave blank to hide."
+              - label: "Body Text"
+                name: "body"
+                widget: "text"
+                required: false
+                hint: "Used when Card Type is Call to Action."
+              - label: "Button Label"
+                name: "button_label"
+                widget: "string"
+                required: false
+                hint: "Used when Card Type is Call to Action. Leave blank for no button."
+              - label: "Button URL"
+                name: "button_url"
+                widget: "string"
+                required: false
+                hint: "e.g. /contact.html"
+              - label: "Highlighted Style (burgundy background)"
+                name: "highlighted"
+                widget: "boolean"
+                default: false
+                hint: "Turn on for the dark red accent card style."
+
+  # -------------------------------------------
   # SITE SETTINGS
   # Single-instance file — controls site-wide
   # values like group name, contact info, socials.

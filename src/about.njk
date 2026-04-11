@@ -6,72 +6,72 @@ pageTitle: "About Us — Theatre 17"
 pageDescription: "About Theatre 17 — Dryden's community theatre group since 1972."
 ---
 
-{% set s = settings.general %}
-
-
+{% set pg = about %}
 
 <div class="page-header">
   <div class="container">
-    <span class="kicker">Who We Are</span>
-    <h1>About Theatre 17</h1>
-    <p>Fifty years of live theatre in the heart of Northwestern Ontario.</p>
+    <span class="kicker">{{ pg.page_header.kicker }}</span>
+    <h1>{{ pg.page_header.heading }}</h1>
+    <p>{{ pg.page_header.subheading }}</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container">
     <div class="about-layout">
+
       <div class="about-content">
-        <h2>Our Story</h2>
-        <p>Theatre 17 was founded in 1972 by a small group of Dryden residents who believed their community deserved live professional-quality theatre — not just as an occasional import, but as a permanent and vital part of local life. Naming themselves after the 17th District of Northwestern Ontario, they put on their first production in a converted church hall with borrowed costumes and hand-painted sets.</p>
-        <p>Over fifty years later, Theatre 17 has produced more than 140 shows, launched countless careers, and become one of the defining cultural institutions of Dryden. We perform at the Dryden Performing Arts Centre and reach an annual audience in the thousands.</p>
-
-        <h2>What We Believe</h2>
-        <p>Theatre 17 is a volunteer community theatre. Every person on stage, behind the curtain, and behind the scenes gives their time freely because they love what live performance does for people — as participants and as audience.</p>
-        <p>We believe theatre belongs to everyone. We welcome new members at any experience level, and we are committed to producing shows that reflect the breadth of our community — comedies, dramas, musicals, Shakespeare, and original work.</p>
-
-        <h2>Youth Theatre Program</h2>
-        <p>In 2003, Theatre 17 established its Youth Theatre Program, offering workshops and performance opportunities to young people aged 10–17 throughout the school year. The program has introduced over 400 young people to the performing arts and produced an annual youth show every spring since 2004.</p>
-        <p>Youth Theatre registrations and information are available through the <a href="/contact.html">Contact</a> page.</p>
-
-        <h2>How to Get Involved</h2>
-        <p>There are many ways to be part of Theatre 17, and you don't need to want to act. We are always looking for people to help with set construction, costumes, props, lighting, sound, front-of-house, and administration. Auditions are held twice yearly for our spring and fall productions.</p>
-        <p>Visit the <a href="/contact.html">Auditions &amp; Contact</a> page to register for upcoming auditions or to introduce yourself to our membership coordinator.</p>
-
-        <h2>Community Partners</h2>
-        <p>Theatre 17 is grateful for the ongoing support of the Town of Dryden, the Dryden District Community Foundation, the Ontario Arts Council, and our many local business sponsors whose generosity keeps ticket prices accessible to all.</p>
+        {% for section in pg.content_sections %}
+          <h2>{{ section.heading }}</h2>
+          {{ section.body | markdown | safe }}
+        {% endfor %}
       </div>
 
       <div class="about-sidebar">
-        <div class="sidebar-card">
-          <h3>By the Numbers</h3>
-          <ul class="sidebar-list">
-            <li><span class="sl-name">Founded</span><span class="sl-role">1972</span></li>
-            <li><span class="sl-name">Productions</span><span class="sl-role">140+</span></li>
-            <li><span class="sl-name">Active Members</span><span class="sl-role">~45</span></li>
-            <li><span class="sl-name">Youth Alumni</span><span class="sl-role">400+</span></li>
-            <li><span class="sl-name">Annual Audience</span><span class="sl-role">~2,500</span></li>
-          </ul>
-        </div>
+        {% for card in pg.sidebar_cards %}
 
-        <div class="sidebar-card">
-          <h3>Executive Board</h3>
-          <ul class="sidebar-list">
-            <li><span class="sl-name">President</span><span class="sl-role">Update in CMS</span></li>
-            <li><span class="sl-name">Vice-President</span><span class="sl-role">Update in CMS</span></li>
-            <li><span class="sl-name">Treasurer</span><span class="sl-role">Update in CMS</span></li>
-            <li><span class="sl-name">Secretary</span><span class="sl-role">Update in CMS</span></li>
-          </ul>
-          <p style="font-size:0.78rem;color:var(--ink-light);margin-top:0.75rem;font-style:italic;">Edit About page content in your site files to update board members.</p>
-        </div>
+          {% if card.highlighted %}
+            <div class="sidebar-card" style="background:var(--burgundy);border-color:var(--burgundy);">
+              <h3 style="color:var(--white);">{{ card.heading }}</h3>
+              {% if card.body %}
+                <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;margin-bottom:1.25rem;">{{ card.body }}</p>
+              {% endif %}
+              {% if card.button_label and card.button_url %}
+                <a href="{{ card.button_url }}" class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.78rem;">{{ card.button_label }}</a>
+              {% endif %}
+            </div>
 
-        <div class="sidebar-card" style="background:var(--burgundy);border-color:var(--burgundy);">
-          <h3 style="color:var(--white);">Join Theatre 17</h3>
-          <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;margin-bottom:1.25rem;">Performers, crew, and supporters all welcome. Reach out to learn more.</p>
-          <a href="/contact.html" class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.78rem;">Get Involved</a>
-        </div>
+          {% elif card.card_type == "cta" %}
+            <div class="sidebar-card">
+              <h3>{{ card.heading }}</h3>
+              {% if card.body %}
+                <p>{{ card.body }}</p>
+              {% endif %}
+              {% if card.button_label and card.button_url %}
+                <a href="{{ card.button_url }}" class="btn btn-primary" style="width:100%;justify-content:center;">{{ card.button_label }}</a>
+              {% endif %}
+            </div>
+
+          {% else %}
+            <div class="sidebar-card">
+              <h3>{{ card.heading }}</h3>
+              {% if card.items and card.items.length %}
+                <ul class="sidebar-list">
+                  {% for item in card.items %}
+                    <li><span class="sl-name">{{ item.label }}</span><span class="sl-role">{{ item.value }}</span></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if card.footnote %}
+                <p style="font-size:0.78rem;color:var(--ink-light);margin-top:0.75rem;font-style:italic;">{{ card.footnote }}</p>
+              {% endif %}
+            </div>
+
+          {% endif %}
+
+        {% endfor %}
       </div>
+
     </div>
   </div>
 </section>
-
