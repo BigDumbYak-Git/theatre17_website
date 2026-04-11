@@ -665,11 +665,14 @@ p:last-child { margin-bottom: 0; }
   gap: 1.5rem;
 }
 .archive-card {
+  display: block;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition);
+  text-decoration: none;
+  color: inherit;
 }
 .archive-card:hover {
   box-shadow: var(--shadow);

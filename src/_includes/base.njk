@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ pageTitle if pageTitle else "Theatre 17" }}</title>
-  <meta name="description" content="{{ pageDescription if pageDescription else 'Theatre 17 is Dryden\'s community theatre group, bringing live performance to Northwestern Ontario since 1972.' }}">
+  <title>{{ pageTitle if pageTitle else (title + " — Theatre 17" if title else "Theatre 17") }}</title>
+  <meta name="description" content="{{ pageDescription if pageDescription else (description | truncate(160) if description else 'Theatre 17 is Dryden\'s community theatre group, bringing live performance to Northwestern Ontario since 1972.') }}">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>

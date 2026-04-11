@@ -1,1 +1,4 @@
-{"permalink": false}
+{
+  "layout": "show-detail.njk",
+  "permalink": "shows/{{ page.fileSlug }}/index.html"
+}

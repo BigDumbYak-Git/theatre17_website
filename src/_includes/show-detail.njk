@@ -1,0 +1,165 @@
+---
+layout: base.njk
+navActive: archive
+---
+
+<div class="page-header">
+  <div class="container">
+    <span class="kicker">{{ status | statusLabel }}</span>
+    <h1 style="font-style:italic;">{{ title }}</h1>
+    {% if playwright %}<p>by {{ playwright }}{% if year %} &mdash; {{ season }} {{ year }}{% endif %}</p>{% endif %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="show-layout">
+
+      <!-- POSTER + ACTIONS -->
+      <div class="show-poster">
+        <div class="show-poster-img">
+          {% if poster %}
+            <img src="{{ poster }}" alt="{{ title }} poster">
+          {% else %}
+            <div class="poster-placeholder">
+              <div class="poster-title">{{ title }}</div>
+              <div class="poster-subtitle">Theatre 17 &mdash; {{ season }} {{ year }}</div>
+            </div>
+          {% endif %}
+        </div>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem;">
+          {% if ticket_url %}
+            <a href="{{ ticket_url }}" class="btn btn-primary" style="justify-content:center;" target="_blank" rel="noopener">Get Tickets</a>
+          {% endif %}
+          <a href="/archive.html" class="btn btn-ghost" style="justify-content:center;">← Back to Archive</a>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="show-details">
+        <span class="status-badge {{ status | statusClass }}" style="margin-bottom:1rem;">
+          {{ status | statusLabel }}
+        </span>
+        <h1>{{ title }}</h1>
+        {% if playwright %}
+          <p class="playwright">by {{ playwright }}</p>
+        {% endif %}
+
+        <div class="show-meta-grid">
+          {% if dates %}
+          <div class="show-meta-item">
+            <label>Dates</label>
+            <span>{{ dates }}</span>
+          </div>
+          {% endif %}
+          {% if venue %}
+          <div class="show-meta-item">
+            <label>Venue</label>
+            <span>{{ venue }}</span>
+          </div>
+          {% endif %}
+          {% if show_times %}
+          <div class="show-meta-item">
+            <label>Show Times</label>
+            <span>{{ show_times }}</span>
+          </div>
+          {% endif %}
+          {% if crew %}
+            {% for member in crew %}
+              {% if member.role and ("Director" in member.role or "director" in member.role) %}
+              <div class="show-meta-item">
+                <label>Director</label>
+                <span>{{ member.name }}</span>
+              </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        {% if description %}
+        <div class="show-description">
+          {{ description | markdown | safe }}
+        </div>
+        {% endif %}
+
+        <div class="ornament-full"></div>
+
+        <!-- CAST -->
+        {% if cast and cast.length %}
+        <div class="cast-section">
+          <div class="cast-section-title">The Cast</div>
+          <div class="cast-grid">
+            {% set half = (cast.length / 2) | round(0, "ceil") %}
+            <div>
+              <div class="cast-list">
+                {% for member in cast %}
+                  {% if loop.index <= half %}
+                  <div class="cast-row">
+                    <span class="cast-name">{{ member.name }}</span>
+                    <span class="cast-role">{{ member.role }}</span>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div>
+              <div class="cast-list">
+                {% for member in cast %}
+                  {% if loop.index > half %}
+                  <div class="cast-row">
+                    <span class="cast-name">{{ member.name }}</span>
+                    <span class="cast-role">{{ member.role }}</span>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- CREATIVE TEAM -->
+        {% if crew and crew.length %}
+        <div class="cast-section">
+          <div class="cast-section-title">Creative &amp; Production Team</div>
+          <div class="cast-list">
+            {% for member in crew %}
+            <div class="cast-row">
+              <span class="cast-name">{{ member.name }}</span>
+              <span class="cast-role">{{ member.role }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- DIRECTOR'S NOTE -->
+        {% if directors_note %}
+        <div class="cast-section">
+          <div class="cast-section-title">Director's Note</div>
+          <div style="font-size:0.95rem;color:var(--ink-mid);line-height:1.8;font-style:italic;padding-left:1rem;border-left:3px solid var(--gold);">
+            {{ directors_note | markdown | safe }}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- GALLERY -->
+        {% if gallery and gallery.length %}
+        <div class="gallery">
+          <div class="cast-section-title">Production Photos</div>
+          <div class="gallery-grid">
+            {% for item in gallery %}
+            <div class="gallery-item">
+              <img src="{{ item.image }}" alt="{{ item.caption or (title + ' production photo') }}">
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+</section>

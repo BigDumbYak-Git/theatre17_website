@@ -35,7 +35,7 @@ pageDescription: "Browse Theatre 17's complete history of productions dating bac
     <!-- Archive Grid -->
     <div class="archive-grid">
       {% for show in allShows %}
-      <div class="archive-card" data-year="{{ show.data.year }}">
+      <a href="{{ show.url }}" class="archive-card" data-year="{{ show.data.year }}">
         <div class="archive-card-poster">
           {% if show.data.poster %}
             <img src="{{ show.data.poster }}" alt="{{ show.data.title }} poster">
@@ -47,19 +47,13 @@ pageDescription: "Browse Theatre 17's complete history of productions dating bac
           {% endif %}
         </div>
         <div class="archive-card-info">
-          <h3>
-            {% if show.data.current_show %}
-              <a href="/show.html">{{ show.data.title }}</a>
-            {% else %}
-              {{ show.data.title }}
-            {% endif %}
-          </h3>
+          <h3>{{ show.data.title }}</h3>
           <div class="year">
             {{ show.data.season }} {{ show.data.year }}
             {% if show.data.playwright %} &bull; {{ show.data.playwright }}{% endif %}
           </div>
         </div>
-      </div>
+      </a>
       {% endfor %}
     </div>
 
