@@ -150,10 +150,20 @@ navActive: archive
           <div class="cast-section-title">Production Photos</div>
           <div class="gallery-grid">
             {% for item in gallery %}
-            <div class="gallery-item">
+            <button class="gallery-item" data-lightbox-src="{{ item.image }}" data-lightbox-caption="{{ item.caption or (title + ' production photo') }}" aria-label="View larger: {{ item.caption or (title + ' production photo') }}">
               <img src="{{ item.image }}" alt="{{ item.caption or (title + ' production photo') }}">
-            </div>
+            </button>
             {% endfor %}
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+          <button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">&times;</button>
+          <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+          <div class="lightbox-content">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
           </div>
         </div>
         {% endif %}

@@ -68,6 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ---- Gallery lightbox ----
+  const lightbox    = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCap = document.getElementById('lightbox-caption');
+  const lightboxClose    = document.getElementById('lightbox-close');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+  if (lightbox) {
+    const openLightbox = (src, caption) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption;
+      lightboxCap.textContent = caption;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      lightboxClose.focus();
+    };
+
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.gallery-item[data-lightbox-src]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openLightbox(btn.dataset.lightboxSrc, btn.dataset.lightboxCaption);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+  }
+
   // ---- Form submission placeholder ----
   document.querySelectorAll('form[data-netlify]').forEach(form => {
     // Netlify handles submission; this just enhances UX
