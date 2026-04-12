@@ -188,7 +188,8 @@ collections:
     label_singular: "Member"
     folder: "src/members"
     create: true
-    slug: "{{slug}}"
+    identifier_field: "name"
+    slug: "{{name}}"
     summary: "{{name}} — {{primary_role}}"
     fields:
 
