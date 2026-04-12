@@ -42,7 +42,7 @@ crew:
     role: Director
   - name: Angie Barton
     role: Stage Manager
-  - name: Emma Liegh Fex
+  - name: Emma-Leigh Fex
     role: Assistant Stage Manager
   - name: Micaela Bange
     role: Property Master
