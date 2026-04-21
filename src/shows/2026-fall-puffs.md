@@ -22,7 +22,7 @@ crew:
   - name: Angie Barton
     role: Director
   - name: Kris Barton
-    role: Set Design
+    role: "Technical Support "
   - name: Audrey Noseworthy
     role: Costume Designer/Maker
 gallery: []
