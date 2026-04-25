@@ -72,4 +72,7 @@ crew:
     role: Lights
   - name: Matt Taylor
     role: Sound
+gallery:
+  - image: /assets/uploads/article_quilters1.jpg
+  - image: /assets/uploads/article_quilters2.jpg
 ---
