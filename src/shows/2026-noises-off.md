@@ -9,7 +9,7 @@ dates: April 24-26, 2008
 opening_date: 2008-04-24
 closing_date: 2008-04-26
 venue: The Centre
-poster: /assets/uploads/poster_noisesoff.jpeg
+poster: /assets/uploads/poster_noisesoff2.jpeg
 description: Called “the funniest farce ever written,” *Noises Off* presents a
   manic menagerie of itinerant actors rehearsing a flop called *Nothing’s On*.
   Slamming doors, on and offstage intrigue, and an errant herring all figure in
@@ -43,7 +43,7 @@ crew:
   - name: Adam Riley
     role: Stage Manager
 gallery:
-  - image: /assets/uploads/poster_noisesoff2.jpeg
+  - image: /assets/uploads/poster_noisesoff.jpeg
   - image: /assets/uploads/article_noisesoff.jpeg
   - image: /assets/uploads/article_noisesoff2.jpeg
 ---
