@@ -45,4 +45,29 @@ crew:
     role: "AWOL: Light & Sound Design / The Wedding Story: Set & Light Design"
   - name: Erik Maua
     role: "The Wedding Story: Director"
+gallery:
+  - image: /assets/uploads/show_awolcover.png
+  - image: /assets/uploads/show_awolnewspaper.png
+  - image: /assets/uploads/show_awol1.jpg
+  - image: /assets/uploads/show_awol2.jpg
+  - image: /assets/uploads/show_awol3.jpg
+  - image: /assets/uploads/show_awol4.jpg
+  - image: /assets/uploads/show_awol5.jpg
+  - image: /assets/uploads/show_awol6.jpg
+  - image: /assets/uploads/show_awol7.jpg
+  - image: /assets/uploads/show_awol8.jpg
+  - image: /assets/uploads/show_awol9.jpg
+  - image: /assets/uploads/show_awol10.jpg
+  - image: /assets/uploads/show_awol11.jpg
+  - image: /assets/uploads/show_awol12.jpg
+  - image: /assets/uploads/show_awol13.jpg
+  - image: /assets/uploads/show_awol15.jpg
+  - image: /assets/uploads/show_awol18.jpg
+  - image: /assets/uploads/show_awol20.jpg
+  - image: /assets/uploads/show_awol23.jpg
+  - image: /assets/uploads/show_awol28.jpg
+  - image: /assets/uploads/show_awol29.jpg
+  - image: /assets/uploads/show_awol30.jpg
+  - image: /assets/uploads/show_awol35.jpg
+  - image: /assets/uploads/show_awol36.jpg
 ---
