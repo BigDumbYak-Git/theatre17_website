@@ -25,7 +25,7 @@ crew:
     role: Director
   - name: Kris Barton
     role: "Technical Support "
-  - name: Audrey Noseworthy
+  - name: Audrey Nosworthy
     role: Costume Designer/Maker
 gallery: []
 ---
