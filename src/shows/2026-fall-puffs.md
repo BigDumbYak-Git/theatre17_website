@@ -5,7 +5,9 @@ year: 2026
 season: Fall
 status: planning
 current_show: true
-dates: October 15 – 17, 2026
+dates: October 22 – 24, 2026
+opening_date: 2026-10-22
+closing_date: 2026-10-24
 venue: The Centre
 poster: /assets/uploads/poster_puffstempm.jpg
 description: >-
