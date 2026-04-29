@@ -35,5 +35,13 @@ crew:
     role: Set Design / Build
   - name: Open Position, contact if interested
     role: Technical Direction
+  - name: Open Position, contact if interested
+    role: Hair & Makeup
+  - name: Open Position, contact if interested
+    role: Backstage
+  - name: Open Position, contact if interested
+    role: Prompter
+  - name: Open Position, contact if interested
+    role: Sound
 gallery: []
 ---
