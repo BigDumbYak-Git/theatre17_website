@@ -27,5 +27,11 @@ crew:
     role: "Technical Support "
   - name: Audrey Nosworthy
     role: Costume Designer/Maker
+  - name: Open Position, contact if interested
+    role: Stage Manager
+  - name: Open Position, contact if interested
+    role: Property Master
+  - name: Open Position, contact if interested
+    role: Set Design / Build
 gallery: []
 ---
