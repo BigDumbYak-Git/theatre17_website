@@ -133,6 +133,12 @@ collections:
         hint: "Full URL to ticket purchase page (e.g. https://showstix4u.com/...)"
         required: false
 
+      - label: "Audition Sign-Up Link"
+        name: "audition_link"
+        widget: "string"
+        required: false
+        hint: "Link to an external audition sign-up form (e.g. Google Form). When set, replaces the contact page audition form and adds a button on the homepage and show page."
+
       # Cast list — a repeating list of name + role pairs
       - label: "Cast"
         name: "cast"

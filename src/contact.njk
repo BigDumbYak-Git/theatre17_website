@@ -60,48 +60,69 @@ pageDescription: "Sign up for auditions or get in touch with Theatre 17 in Dryde
         </div>
       </div>
 
-      <!-- Audition Form -->
+      <!-- Audition Form / CTA -->
       <div class="form-block">
-        <h2>Audition Registration</h2>
-        <p>Fill out this form and we'll be in touch to confirm your time slot.</p>
-        <form action="https://formspree.io/f/xzdjnrly" method="POST">          
-          <div class="form-row">
-            <div class="form-group">
-              <label for="aud-first">First Name</label>
-              <input type="text" id="aud-first" name="first-name" required autocomplete="given-name">
+        {% if show and show.data.audition_link %}
+
+          <h2>Sign Up For Auditions</h2>
+          {% if show.data.status in ["planning", "auditions"] %}
+            <p>Ready to be part of <em>{{ show.data.title }}</em>? Sign up using the link below and we'll be in touch with details.</p>
+          {% else %}
+            <p>Use the link below to sign up for auditions.</p>
+          {% endif %}
+          <a href="{{ show.data.audition_link }}" class="btn btn-primary"
+             style="width:100%;justify-content:center;margin-top:1rem;"
+             target="_blank" rel="noopener">Sign Up For Auditions</a>
+
+        {% elif show and show.data.status in ["planning", "auditions"] %}
+
+          <h2>Audition Registration</h2>
+          <p>Fill out this form and we'll be in touch to confirm your time slot.</p>
+          <form action="https://formspree.io/f/xzdjnrly" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="aud-first">First Name</label>
+                <input type="text" id="aud-first" name="first-name" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="aud-last">Last Name</label>
+                <input type="text" id="aud-last" name="last-name" required autocomplete="family-name">
+              </div>
             </div>
             <div class="form-group">
-              <label for="aud-last">Last Name</label>
-              <input type="text" id="aud-last" name="last-name" required autocomplete="family-name">
+              <label for="aud-email">Email Address</label>
+              <input type="email" id="aud-email" name="email" required autocomplete="email">
             </div>
-          </div>
-          <div class="form-group">
-            <label for="aud-email">Email Address</label>
-            <input type="email" id="aud-email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="aud-phone">Phone Number</label>
-            <input type="tel" id="aud-phone" name="phone" autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label for="aud-interest">I'm interested in</label>
-            <select id="aud-interest" name="interest">
-              <option value="performing">Performing (on stage)</option>
-              <option value="crew">Crew / Production (backstage)</option>
-              <option value="both">Both performing and crew</option>
-              <option value="unsure">Not sure yet</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="aud-experience">Theatre Experience (optional)</label>
-            <textarea id="aud-experience" name="experience" placeholder="Previous shows, roles, training — or just let us know you're new. It's all welcome."></textarea>
-          </div>
-          <div class="form-group">
-            <label for="aud-avail">Availability Notes</label>
-            <input type="text" id="aud-avail" name="availability" placeholder="e.g. can't do Friday evenings, available weekends only, etc.">
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem;">Submit Registration</button>
-        </form>
+            <div class="form-group">
+              <label for="aud-phone">Phone Number</label>
+              <input type="tel" id="aud-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="aud-interest">I'm interested in</label>
+              <select id="aud-interest" name="interest">
+                <option value="performing">Performing (on stage)</option>
+                <option value="crew">Crew / Production (backstage)</option>
+                <option value="both">Both performing and crew</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="aud-experience">Theatre Experience (optional)</label>
+              <textarea id="aud-experience" name="experience" placeholder="Previous shows, roles, training — or just let us know you're new. It's all welcome."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="aud-avail">Availability Notes</label>
+              <input type="text" id="aud-avail" name="availability" placeholder="e.g. can't do Friday evenings, available weekends only, etc.">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem;">Submit Registration</button>
+          </form>
+
+        {% else %}
+
+          <h2>Interested in Getting Involved?</h2>
+          <p>We're not currently casting, but we'd love to hear from you. Use the general contact form below or send us an email — we'll be in touch when the next casting call opens.</p>
+
+        {% endif %}
       </div>
 
     </div>
