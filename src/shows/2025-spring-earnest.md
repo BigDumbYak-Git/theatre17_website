@@ -33,7 +33,7 @@ cast:
     role: Gwendolen Fairfax
   - name: Brittany Cooke
     role: Cecily Cardew
-  - name: Kate Cooke
+  - name: Kate Cook
     role: Miss Prism
 crew:
   - name: Judith Hamilton
