@@ -20,7 +20,7 @@ cast:
     role: "AWOL: Cyril"
   - name: Mike Patey
     role: "AWOL: Neville"
-  - name: Lesley Norman
+  - name: Lesley-Ann Norman
     role: "AWOL: Mrs. Hastings, Belinda"
   - name: Damon Armstrong
     role: Patrick
