@@ -1,6 +1,6 @@
 ---
 title: Murder Inn
-playwright: Howard Voland and KiethMcGregor
+playwright: Howard Voland and Kieth McGregor
 year: 2013
 season: Spring
 status: closed
