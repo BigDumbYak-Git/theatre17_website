@@ -39,7 +39,7 @@ cast:
     role: "The Shock of Recognition: Richard Prawling"
   - name: Judy Sadek
     role: "The Footsteps of Doves: Saleswoman"
-  - name: Rachele DupuisMorris
+  - name: Rachele Dupuis Morris
     role: "The Footsteps of Doves: Harriet Porter"
   - name: Murray Cook
     role: "The Footsteps of Doves: George Porter, I'll Be Home For Christmas: Chuck
