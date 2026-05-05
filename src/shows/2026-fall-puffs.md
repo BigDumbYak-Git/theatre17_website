@@ -28,6 +28,8 @@ crew:
     role: "Technical Support "
   - name: Audrey Nosworthy
     role: Costume Designer/Maker
+  - name: Natalie Callewaert
+    role: Choreography
   - name: Open Position, contact if interested
     role: Stage Manager
   - name: Open Position, contact if interested
@@ -44,7 +46,5 @@ crew:
     role: Prompter
   - name: Open Position, contact if interested
     role: Sound
-  - name: Natalie Callewaert
-    role: Choreography
 gallery: []
 ---
