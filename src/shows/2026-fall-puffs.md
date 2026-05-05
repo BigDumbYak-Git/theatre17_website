@@ -44,5 +44,7 @@ crew:
     role: Prompter
   - name: Open Position, contact if interested
     role: Sound
+  - name: Natalie Callewaert
+    role: Choreography
 gallery: []
 ---
