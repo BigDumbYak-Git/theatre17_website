@@ -30,6 +30,8 @@ crew:
     role: Costume Designer/Maker
   - name: Natalie Callewaert
     role: Choreography
+  - name: Erik Maua
+    role: Sound
   - name: Open Position, contact if interested
     role: Stage Manager
   - name: Open Position, contact if interested
@@ -44,7 +46,5 @@ crew:
     role: Backstage
   - name: Open Position, contact if interested
     role: Prompter
-  - name: Open Position, contact if interested
-    role: Sound
 gallery: []
 ---
