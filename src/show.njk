@@ -81,7 +81,7 @@ pageDescription: "Theatre 17 current production in Dryden, Ontario."
           {% endif %}
           {% if show.data.crew %}
             {% for member in show.data.crew %}
-              {% if member.role and ("Director" in member.role or "director" in member.role) %}
+              {% if member.role | isDirector %}
               <div class="show-meta-item">
                 <label>Director</label>
                 <span>{{ member.name }}</span>

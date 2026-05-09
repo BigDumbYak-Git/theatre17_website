@@ -67,7 +67,7 @@ navActive: archive
           {% endif %}
           {% if crew %}
             {% for member in crew %}
-              {% if member.role and ("Director" in member.role or "director" in member.role) %}
+              {% if member.role | isDirector %}
               <div class="show-meta-item">
                 <label>Director</label>
                 <span>{{ member.name }}</span>
