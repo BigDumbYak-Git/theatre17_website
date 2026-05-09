@@ -19,7 +19,7 @@ crew:
   - name: Judith Hamilton
     role: Director
   - name: Derek Schroeder
-    role: Technical Direction
+    role: Technical Director
   - name: Jeff Cook
     role: Set Engineer / Construction
   - name: Trevor Gauthier
