@@ -24,4 +24,7 @@ crew:
     role: Set Engineer / Construction
   - name: Trevor Gauthier
     role: Audio Engineer
+gallery:
+  - image: /assets/uploads/show_rumours1.png
+  - image: /assets/uploads/show_rumours2.png
 ---
