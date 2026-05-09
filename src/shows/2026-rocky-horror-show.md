@@ -168,5 +168,28 @@ crew:
     name: Taylor Fast
   - role: Art/Painting
     name: Tim McKillop
-gallery: []
+gallery:
+  - image: /assets/uploads/media_rockyhorror.jpg
+  - image: /assets/uploads/show_rockyhorror1.jpg
+    caption: David Huffman as Dr. Frank’N’Furter wonders ‘whatever happened to Fay
+      Wray?’ during the second act of Theatre 17’s last of three performances of
+      the Rocky Horror Show at The Centre, Nov. 4.  Photos by Michael
+      Christianson
+  - image: /assets/uploads/show_rockyhorror2.jpg
+    caption: A fun-loving Saturday night crowd takes a jump to the right during a
+      final reprise of Let’s Do the Time Warp Again, Nov. 4 at The Centre.
+  - image: /assets/uploads/show_rockyhorror3.jpg
+    caption: "The Rocky Horror Band. From left: Chris Marchand, Lloyd Napish, Rob
+      Franklin and Tara Chasowy"
+  - image: /assets/uploads/show_rockyhorror4.jpg
+    caption: Show goers getting into the spirit of the cult classic show.
+  - image: /assets/uploads/show_rockyhorror5.jpg
+    caption: "From left: Jasmine Collin as Janet, Nate Puddicombe as Brad, David
+      Huffman as Frank’N’Furter and Amy Maua as Magenta."
+  - image: /assets/uploads/show_rockyhorror6.jpg
+    caption: Josh Couto strikes a pose as Rocky.
+  - image: /assets/uploads/show_rockyhorror7.jpg
+    caption: Laura-Lee Pernsky as Riff Raff.
+  - image: /assets/uploads/show_rockyhorror8.jpg
+    caption: Catherine Kiewning and Sheila Wilson opened and closed the show.
 ---
