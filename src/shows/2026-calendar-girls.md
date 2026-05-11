@@ -10,6 +10,21 @@ opening_date: 2014-02-19
 closing_date: 2014-02-22
 venue: The Centre
 poster: /assets/uploads/poster_calendargirls.webp
+description: >-
+  
+
+  When Annie's husband John dies of leukemia, she and best friend Chris resolve to raise money for a new settee in the local hospital waiting room. They manage to persuade four fellow Women's Institute members to pose nude with them for an "alternative" calendar, with a little help from hospital porter and amateur photographer Lawrence. The news of the women's charitable venture spreads like wildfire, and hordes of press soon descend on the small village of Knapeley in the Yorkshire Dales. The calendar is a success, but Chris and Annie's friendship is put to the test under the strain of their newfound fame.
+
+
+  Based on the true story of eleven WI members who posed nude for a calendar to raise money for the Leukaemia Research Fund, *Calendar Girls* opened at the Chichester Festival Theatre and has since become the fastest-selling play in British theatre history.
+directors_note: |-
+  ## News articles
+
+  <https://yoursunsetcountry.ca/calendar-girls-donate-20000-to-dryden-hospital/>
+
+  <https://yoursunsetcountry.ca/calendar-girls-donate-setee-to-drhc/>
+
+  <https://yoursunsetcountry.ca/calendar-girls-calendars-go-on-sale/>
 cast:
   - name: Darlene Fuerst
     role: Chris
