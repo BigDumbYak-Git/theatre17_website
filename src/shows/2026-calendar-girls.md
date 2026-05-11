@@ -17,15 +17,12 @@ description: >-
 
 
   Based on the true story of eleven WI members who posed nude for a calendar to raise money for the Leukaemia Research Fund, *Calendar Girls* opened at the Chichester Festival Theatre and has since become the fastest-selling play in British theatre history.
-directors_note: >-
+directors_note: |-
   ## News articles
 
-
-  [https://yoursunsetcountry.ca/calendar-girls-donate-20000-to-dryden-hospital/](https://yoursunsetcountry.ca/calendar-girls-donate-setee-to-drhc/)
-
+  <https://yoursunsetcountry.ca/calendar-girls-donate-20000-to-dryden-hospital/>
 
   <https://yoursunsetcountry.ca/calendar-girls-donate-setee-to-drhc/>
-
 
   <https://yoursunsetcountry.ca/calendar-girls-calendars-go-on-sale/>
 cast:
