@@ -71,4 +71,16 @@ crew:
 gallery:
   - image: /assets/uploads/poster_calendargirls2.webp
   - image: /assets/uploads/article_calendargirls.jpg
+  - image: /assets/uploads/show_calendargirlscasta.jpg
+    caption: Full cast from Cast A
+  - image: /assets/uploads/show_calendargirlscastb.jpg
+    caption: Full cast from Cast B
+  - image: /assets/uploads/show_calendargirls1.jpg
+  - image: /assets/uploads/show_calendargirls2.jpg
+  - image: /assets/uploads/show_calendargirls3.jpg
+  - image: /assets/uploads/show_calendargirls4.jpg
+  - image: /assets/uploads/show_calendargirls5.jpg
+  - image: /assets/uploads/show_calendargirls6.jpg
+  - image: /assets/uploads/show_calendargirls7.jpg
+  - image: /assets/uploads/show_calendargirls8.jpg
 ---
