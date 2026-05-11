@@ -18,12 +18,10 @@ directors_note: >-
   Marvelous!
 
 
-
-
   ## Marjorie Salavich
 
 
-  Having warn a variety of hats and assisted behind the scenes with Theatre 17 for many years, when Judith suggested Irene and I should give consideration to directing, we agreed it was something worthy of checking off one's bucket list. It wasn't actually ON my list but, well ... still worth considering. It didn't take the two of us long to get started.
+  Having worn a variety of hats and assisted behind the scenes with Theatre 17 for many years, when Judith suggested Irene and I should give consideration to directing, we agreed it was something worthy of checking off one's bucket list. It wasn't actually ON my list but, well ... still worth considering. It didn't take the two of us long to get started.
 
 
   Beginning with the early stages of developing the production, through meetings, auditions, casting, rehearsals, set design, and set building, it has been an enjoyable process; time consuming, but a pleasant journey. Irene and I easily slid into our preferred creative roles taking on tasks as required.
