@@ -10,6 +10,25 @@ opening_date: 2017-11-02
 closing_date: 2017-11-04
 venue: The Centre
 poster: /assets/uploads/poster_rockyhorror.png
+description: >-
+  
+
+  That sweet transvestite and his motley crew did the Time Warp on Broadway in a 25th anniversary revival. Complete with sass from the audience, cascading toilet paper, and an array of other audience participation props, this deliberately kitschy rock 'n' roll sci-fi gothic musical is more fun than ever.
+
+
+  *"A socko wacko weirdo rock concert."* - WNBC TV
+
+
+  *"A musical that deals with mutating identity and time warps becomes one of the most mutated, time-warped phenomena in show business."* - The New York Times
+
+
+  *"Campy trash."* - Time
+
+
+  *"One of the '10 most influential postwar British plays.'"* - Guardian UK
+
+
+  The Rocky Horrow Show was first presented on Broadway by Lou Adler at the Belasco Theatre in New York City in March 1975. It was directed by Jim Sharman.
 cast:
   - name: Catherine Kiewning
     role: Usherette
