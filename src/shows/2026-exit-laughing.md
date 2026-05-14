@@ -25,22 +25,39 @@ cast:
   - name: Karen McDonald
     role: Millie
   - name: Trevor Gauthier
-    role: Bobby
+    role: Policeman
 crew:
-  - name: Marj Salavich
-    role: Director
-  - name: Irene Skene
-    role: Director
-  - name: Derek Schroeder
-    role: Technical Direction
-  - name: Kate Cook
-    role: Stage Manager
   - name: Jeff Cook
-    role: Set Engineer / Construction
+    role: Set Design, Set Construction, Set Decor & Props
+  - name: Derek Schroeder
+    role: Set Design, Technician
+  - name: Irene Skene
+    role: Director, Producer, Set Design, Set Decor & Props, Posters
+  - name: Marj Salavich
+    role: Director, Producer, Set Design, Programs, Digital Media & Advertising
+  - name: Kate Cook
+    role: Set Construction, Set Decor & Props, Stage Manager
   - name: Trevor Gauthier
     role: Audio Engineer
-  - name: Julija Graham
-    role: Prompter
   - name: Marcel Penner
-    role: Lighting Direction
+    role: Lighting Director
+  - name: Julija Graham
+    role: Script Prompter
+  - name: Rick Smith
+    role: Audio Director
+  - name: Krik Gauthier
+    role: Audio Technician
+  - name: Sheila Wilson
+    role: Stagehand
+  - name: Jay Roussin
+    role: Stagehand
+  - name: Theresa Lambert
+    role: Programs
+  - name: Cast & Crew
+    role: Set Decor & Props, Hair & Make-Up
+gallery:
+  - image: /assets/uploads/media_exitlaughing1.jpg
+  - image: /assets/uploads/media_exitlaughing2.jpg
+  - image: /assets/uploads/ticket_exitlaughing.jpg
+  - image: /assets/uploads/article_exitlaughing.jpg
 ---
