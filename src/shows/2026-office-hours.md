@@ -11,38 +11,72 @@ closing_date: 2015-05-09
 show_times: 7:00 PM
 venue: The Centre
 poster: /assets/uploads/poster_officehours.webp
-description: It's Friday afternoon in the big city, and in six different
-  offices, six different stories unfold simultaneously — all connected somehow,
-  from the figure skater on the ledge to the novelist in the closet. A madcap
-  race towards quitting time.
+description: It's late Friday afternoon in a big Canadian city, and in six
+  different offices, six different stories unfold simultaneously — all connected
+  somehow, from the figure skater on the ledge to the novelist in the closet. A
+  madcap race towards quitting time.
 cast:
+  - name: Peter Marshall
+    role: Warren Kimble, Lloyd Penny
+  - name: Kylee Childs
+    role: Pam Gerard
+  - name: Dave Darling
+    role: One-Armed Man, Richard Penny
+  - name: Al Markham
+    role: Gordon Blaine
+  - name: Dayna DeBenedet
+    role: Francine Major
+  - name: Rob Rodgers
+    role: Bobby Holland
+  - name: Murray Cook
+    role: Mark Young, Stan Thunder
   - name: Darlene Fuerst
-    role: Connie
+    role: Ellie Young
+  - name: Audrey Nosworthy
+    role: Rhonda Penny
+  - name: " Bruce Walchuk"
+    role: Artie Barnes
   - name: Theresa Lambert
-    role: Leona
+    role: Sharon Freeman
   - name: Trevor Gauthier
-    role: Bobby
+    role: Man (Henry Hatcher)
+  - name: Jason Roussin
+    role: Neil Penny
   - name: Jasimine Collin
-    role: Rachel
-  - name: Karen McDonald
-    role: Millie
+    role: Understudy
+  - name: Shirley McLean
+    role: Understudy
 crew:
   - name: "Judith Hamilton "
     role: Director
   - name: Derek Schroeder
-    role: Technical Direction
+    role: Production Manager
+  - name: Trevor Gauthier
+    role: Audio Engineer
+  - name: Rick Smith
+    role: Audio Technician
+  - name: Marcel Penner
+    role: Lighting Technician
   - name: Gail Arnold
     role: Stage Manager
   - name: Jeff Cook
-    role: Set Engineer / Construction
+    role: Set Design / Construction, Props
   - name: Kate Cook
-    role: Set Design & Decoration
-  - name: Trevor Gauthier
-    role: Audio Engineer
-  - name: Marcel Penner
-    role: Lighting Direction
-  - name: Julija Graham
-    role: Prompter
+    role: Set Design / Construction, Props
+  - name: Lindsay Desaulniers
+    role: Set Design / Construction, Props
+  - role: Set Design / Construction, Props
+    name: Sabrina Desaulniers
+  - name: Patti Gallaway
+    role: Props
+  - name: Meilssa Wilson
+    role: Hair & Make-Up
+  - name: Courtney McArthur
+    role: Hair & Make-Up
+  - name: Dave Darling
+    role: Poster Design & Production
+  - name: Marjorie Salavich
+    role: Program and Prompter
 gallery:
   - image: /assets/uploads/show_officehours_048.jpg
   - image: /assets/uploads/show_officehours_043.jpg
