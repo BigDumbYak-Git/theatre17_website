@@ -26,9 +26,9 @@ cast:
   - name: Danny Arnold
     role: Madame Arcati
   - name: Erik Maua
-    role: Dr. Bradman
+    role: Dr. George Bradman
   - name: Karen McDonald
-    role: Mrs. Bradman
+    role: Violet Bradman
   - name: Emma-Leigh Fex
     role: Edith
   - name: Renee Fediuk
@@ -41,15 +41,19 @@ crew:
   - name: Amy Maua
     role: Director
   - name: Angie Barton
-    role: Stage Manager
+    role: Stage Manager, Set Design
   - name: Emma-Leigh Fex
-    role: Assistant Stage Manager
+    role: Assistant Stage Manager, Set Design
   - name: Micaela Bange
-    role: Property Master
+    role: Properties Manager
   - name: Clara Wilkinson
     role: Stagehand
   - name: Kris Barton
-    role: Set Build/Media Design
+    role: Set Build, Media Design
+  - name: Rachel Gessie-Ladouceur
+    role: Front of House
+  - name: Ted Mitchell
+    role: Script Prompter
 gallery:
   - image: /assets/uploads/show_blithespirit1.png
     caption: ""
