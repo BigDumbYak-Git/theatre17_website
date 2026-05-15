@@ -16,4 +16,7 @@ description: A dramatic reading of the classic 1843 Dickens novella, presented
 crew:
   - name: Judith Hamilton
     role: Director
+gallery:
+  - image: /assets/uploads/article_achristmascarol1.jpg
+  - image: /assets/uploads/article_achristmascarol2.jpg
 ---
